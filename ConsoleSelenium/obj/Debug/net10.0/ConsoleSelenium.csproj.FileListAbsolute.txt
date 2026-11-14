@@ -3,3 +3,13 @@ C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Deb
 C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.AssemblyInfo.cs
 C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.csproj.CoreCompileInputs.cache
 C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.sourcelink.json
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\bin\Debug\net10.0\ConsoleSelenium.exe
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\bin\Debug\net10.0\ConsoleSelenium.deps.json
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\bin\Debug\net10.0\ConsoleSelenium.runtimeconfig.json
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\bin\Debug\net10.0\ConsoleSelenium.dll
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\bin\Debug\net10.0\ConsoleSelenium.pdb
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.dll
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\refint\ConsoleSelenium.dll
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.pdb
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.genruntimeconfig.cache
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ref\ConsoleSelenium.dll
