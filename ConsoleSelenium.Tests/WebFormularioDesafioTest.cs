@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using ConsoleSelenium;
 
 [TestClass]
 public class WebFormularioDesafioTest
@@ -14,7 +15,6 @@ public class WebFormularioDesafioTest
     {
         var options = new ChromeOptions();
         options.AddArgument("--start-maximized");
-        // options.AddArgument("--headless"); // Descomente se quiser rodar sem abrir a janela do navegador
         _driver = new ChromeDriver(options);
     }
 
@@ -30,17 +30,16 @@ public class WebFormularioDesafioTest
     {
         _driver.Navigate().GoToUrl(Url);
 
-        _driver.FindElement(By.Name("my-text")).SendKeys("Seu Nome Completo");
-        _driver.FindElement(By.Name("my-password")).SendKeys("SenhaSegura123");
-        _driver.FindElement(By.Name("my-textarea")).SendKeys("Experiencia com testes automatizados usando C# e Selenium.");
+        string nome = AutomacaoHelper.ObterNomeDesenvolvedor();
+        _driver.FindElement(By.Name("my-text")).SendKeys(nome);
+        _driver.FindElement(By.Name("my-password")).SendKeys("SenhaSegura123!");
+        _driver.FindElement(By.Name("my-textarea")).SendKeys("Automação utilizando C#, MSTest e Selenium.");
 
         var readonlyInput = _driver.FindElement(By.Name("my-readonly"));
         Assert.AreEqual("Readonly input", readonlyInput.GetAttribute("value"));
 
         _driver.FindElement(By.CssSelector("button[type='submit']")).Click();
-
-        var message = _driver.FindElement(By.Id("message")).Text;
-        Assert.AreEqual("Received!", message);
+        Assert.AreEqual("Received!", _driver.FindElement(By.Id("message")).Text);
     }
 
     [TestMethod]
@@ -52,11 +51,10 @@ public class WebFormularioDesafioTest
         selectElement.SelectByValue("2");
         Assert.AreEqual("2", selectElement.SelectedOption.GetAttribute("value"));
 
-        var datalistInput = _driver.FindElement(By.Name("my-datalist"));
-        datalistInput.SendKeys("Seattle");
+        _driver.FindElement(By.Name("my-datalist")).SendKeys("Seattle");
 
         _driver.FindElement(By.CssSelector("button[type='submit']")).Click();
-        Assert.IsNotNull(_driver.FindElement(By.Id("message")));
+        Assert.AreEqual("Received!", _driver.FindElement(By.Id("message")).Text);
     }
 
     [TestMethod]
@@ -73,10 +71,9 @@ public class WebFormularioDesafioTest
         var radio2 = _driver.FindElement(By.Id("my-radio-2"));
         if (!radio2.Selected) radio2.Click();
 
-        var colorPicker = _driver.FindElement(By.Name("my-colors"));
-        colorPicker.SendKeys("#00ff00");
+        _driver.FindElement(By.Name("my-colors")).SendKeys("#00ff00");
 
         _driver.FindElement(By.CssSelector("button[type='submit']")).Click();
-        Assert.IsNotNull(_driver.FindElement(By.Id("message")));
+        Assert.AreEqual("Received!", _driver.FindElement(By.Id("message")).Text);
     }
 }

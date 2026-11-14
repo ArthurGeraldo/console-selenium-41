@@ -1,0 +1,5 @@
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.AssemblyInfoInputs.cache
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.AssemblyInfo.cs
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.csproj.CoreCompileInputs.cache
+C:\Users\Ash\Documents\VSCODE Projects\ConsoleSelenium41\ConsoleSelenium\obj\Debug\net10.0\ConsoleSelenium.sourcelink.json
