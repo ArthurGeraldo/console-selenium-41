@@ -33,7 +33,7 @@ public class WebFormularioDesafioTest
         string nome = AutomacaoHelper.ObterNomeDesenvolvedor();
         _driver.FindElement(By.Name("my-text")).SendKeys(nome);
         _driver.FindElement(By.Name("my-password")).SendKeys("SenhaSegura123!");
-        _driver.FindElement(By.Name("my-textarea")).SendKeys("Automação utilizando C#, MSTest e Selenium.");
+        _driver.FindElement(By.Name("my-textarea")).SendKeys("Experiência com testes automatizados utilizando C#, MSTest e Selenium.");
 
         var readonlyInput = _driver.FindElement(By.Name("my-readonly"));
         Assert.AreEqual("Readonly input", readonlyInput.GetAttribute("value"));
@@ -51,7 +51,8 @@ public class WebFormularioDesafioTest
         selectElement.SelectByValue("2");
         Assert.AreEqual("2", selectElement.SelectedOption.GetAttribute("value"));
 
-        _driver.FindElement(By.Name("my-datalist")).SendKeys("Seattle");
+        var datalistInput = _driver.FindElement(By.Name("my-datalist"));
+        datalistInput.SendKeys("Seattle");
 
         _driver.FindElement(By.CssSelector("button[type='submit']")).Click();
         Assert.AreEqual("Received!", _driver.FindElement(By.Id("message")).Text);
@@ -68,8 +69,9 @@ public class WebFormularioDesafioTest
         var check2 = _driver.FindElement(By.Id("my-check-2"));
         if (!check2.Selected) check2.Click();
 
-        var radio2 = _driver.FindElement(By.Id("my-radio-2"));
-        if (!radio2.Selected) radio2.Click();
+        var radio2 = _driver.Id("my-radio-2"); // Correção para seletor do rádio
+        var radio2Element = _driver.FindElement(By.Id("my-radio-2"));
+        if (!radio2Element.Selected) radio2Element.Click();
 
         _driver.FindElement(By.Name("my-colors")).SendKeys("#00ff00");
 

@@ -4,7 +4,15 @@ namespace ConsoleSelenium
     {
         static void Main(string[] args)
         {
-            // Ponto de entrada do Console Application
+            // Projeto principal configurado para automação
+        }
+    }
+
+    public static class AutomacaoHelper
+    {
+        public static string ObterNomeDesenvolvedor()
+        {
+            return "Arthur Geraldo Santos Silva";
         }
     }
 }
